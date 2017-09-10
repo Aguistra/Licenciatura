@@ -1,0 +1,428 @@
+\documentclass[11pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{uarial}
+\usepackage[spanish]{babel}
+% ubica las figuras y tablas a X cm del margen tanto derecho como izquierdo, pone el label de la figura en negritas y tanto el texto como el label en una fuente mas pequeña (del mimso tamaño quie los pies de pagina). 
+\usepackage[margin=1.5cm,font=footnotesize,labelfont=bf]{caption}
+\makeindex
+
+%\title{\textbf{Caminos geodésicos en el universo anisótropo de Gödel }}
+%\author{Aguirre Astrain Angelica}
+%\date{\today}
+\begin{document}
+%\vspace{5em}
+%\maketitle
+
+%%% CARÁTULA
+\newdimen\MSup
+\newdimen\MIzq
+
+%% Valores ajustables
+\MSup=50pt   
+\MIzq=50pt  
+
+
+
+\newenvironment{changemargin}[1]{%
+\begin{list}{}{%
+\setlength{\leftmargin}{#1}%
+\setlength{\topmargin}{-100pt}
+\setlength{\parsep}{\parskip}%
+}\item[]
+}{\end{list}}
+
+\addtolength{\topmargin}{-\MSup}
+
+\begin{changemargin}{-\MIzq}
+\thispagestyle{empty}
+\begin{minipage}[c][1pt][t]{0.2\paperwidth}
+\begin{center}
+
+\includegraphics [width=100 pt ]{esc}\\
+\vskip 20pt
+\hskip -10pt
+\linethickness{1.6pt} 
+\line(0,1){520}
+\linethickness{0.9pt} 
+\line(0,1){500}
+\linethickness{1.6pt} 
+\line(0,1){520}
+\end{center}
+\end{minipage}
+\hskip 20 pt
+\begin{minipage}[c][1pt][t]{0.6\paperwidth}
+\begin{center}
+\vskip 30pt
+{\LARGE \scshape Universidad Veracruzana}
+\linethickness{1.6pt} 
+\line(1,0){350}\\
+\linethickness{.9pt} 
+\line(1,0){313}
+\vskip 10pt
+
+
+{\Large \scshape Facultad de F\'isica }
+
+
+\vskip 60pt
+
+
+{\LARGE \textbf{ Caminos geodésicos en el universo anisótropo de Gödel
+}}\\
+
+\vskip 70pt
+
+{\Large Trabajo recepcional en la modalidad de:}\\
+
+\vskip 12pt
+
+\textbf{\LARGE TESIS}
+
+
+\vskip 12 pt
+{\Large que como requisito pacial para obtener el t\'itulo de:}
+\vskip 12pt
+
+\textbf{\LARGE Licenciada en F\'isica}
+\end{center}
+
+\vskip 12pt
+
+\begin{center}
+{\Large {P\ R\ E\ S\ E\ N\ T\ A} }
+\end{center}
+
+\vskip 12pt
+
+\begin{center}
+\textbf{\LARGE  ANGELICA AGUIRRE ASTRAIN}
+\end{center}
+
+\vskip 70pt
+
+\begin{center}
+{\large ASESOR:}\\
+\vskip 20 pt
+%Efraín?
+{\large  DRA. HILDA NOEMI NÚÑEZ YÉPEZ }\\
+\vskip 75 pt
+
+
+Xalapa Enr\'iquez, Veracruz\hfill Mes  a\~no
+
+
+\end{center}
+\end{minipage}
+\end{changemargin}
+
+\newpage
+
+\addtolength{\topmargin}{\MSup}
+%%%
+
+
+
+%Para empezar la numeración en números romanos
+\pagenumbering{Roman}
+\tableofcontents
+\cleardoublepage
+
+%Propósitos:-Dar a conocer el propósito de Gödel al proponer un modelo de universo que desafía nuestra noción intuitiva del tiempo.
+
+% NOTAS
+% -palabra- : revisar si es la correcta para expresar algo
+
+%Para empezar la numeración en arábico
+\pagenumbering{arabic}
+
+\chapter{Introducción}
+%\section{Introducción}
+
+%Comienzo, la ciencia como un modelo que intenta reproducir la ''realidad'' que percibimos. Muchas veces esta idea se deja de lado y la ilusión de que las teorías son la realidad toma su lugar y no nos deja ver que quizá hay algo más allá de lo que podemos o podremos describir y predecir. (\cite{inverno})
+
+El éxito que las ciencias exactas han logrado es por su capacidad de describir de forma sistemática mucho de lo que percibimos como \emph{realidad}. Pero no debemos olvidar que toda ley física(?) propuesta no es más que un intento del hombre para describir lo que experimenta a traves de los sentidos y observaciones su entorno.
+
+La ley que regía la gravitación propuesta en el siglo XVII tuvo que ser reemplazada por que presentaba ciertas inconsistencias(?) bien conocidas pero difíciles de enfrentar, cosa de la que Newton estaba conciente; esta teoría era provisional en lo que una mejor aparecía, que sucedió hasta casi 400 años después. Fue a principios del siglo XX que un científico judío hizo algo impensable, desafió la idea de la gravedad como una fuerza que afectaba de forma instantánea a los objetos. 
+
+
+%Todos en algún momento de nuestra vida hemos escuchado esta historia, pero quizá no siempre se ha llegado a apreciar la genialidad de esta idea que revolucionó la forma de ver el universo. 
+La gravedad pasó de ser una fuerza a una manifestación del tipo de espacio-tiempo en el que se encuentra un objeto, espacio-tiempo que se verá afectado por ese objeto y va a sufrir una deformación por la que el objeto se va a abrir paso y describira una trayectoria.
+
+ \section{Gödel, vida y obra}
+ 
+ \section{Extrapolando los teoremas de incompletitud}
+% Importancia del teorema de incompletitud en matemáticas y su aplicación a otros campos entre ellos la física.
+
+Hasta (fecha/siglo) las matemáticas se basaban/ eran una estructura de forma:
+
+A finales del siglo XIX los matemáticos se vieron en apuros al enfrentarse con inconsistencias y paradojas en sus planteamientos 
+
+Hilbert se preguntó si un sistema lógico simbólico podría ser completo y consistente
+
+David Hilbert, conocido seguidor del positivismo (?), en --- basado en sus fuertes creencias positivistas propuso que una analogía de las matemáticas con la física sería que, mientras la física se encarga de describir los fenómenos naturales con base en ciertas leyes puestas a prueba con experimentos cognitivos, la matemática (aritmética ?) debía estar basada en una serie de axiomas que con ellos y un procedimiento riguroso de comprobación llevarían a las verdades de las matemáticas. Hilbert apuntaba a generar un formalismo matemático que nos permitiera conocer todas las verdades matemáticas a partir de demostraciones.
+
+
+Sin embargo el joven Gödel de tan solo 25 años, en 1931 (como parte de su tesis doctoral de ---) en su intento de '' ayudar '' a Hilbert termino truncando su propósito, lo que marcaría un hito en la historia de las matemáticas y su desarrollo. Gödel presenta sus teoremas de incompletitud que cuestionan todo intento de hacer un sistema formal completo y consistente basado en axiomas que, de acuerdo con el primer teorema, describa todas las verdades de la aritmética de los números naturales y que se pueda demostrar su consistencia a partir de solo los axiomas propuestos en él (segundo teorema).
+%citar los teoremas
+
+\section{Gödel y Einstein, una curiosa amistad}
+% Relación de Gödel y Einstein (a world without time)
+Albert Einstein perteneció al Instituto para Estudios Avanzados en Princeton   
+
+
+% Propósito del universo de Gödel (UG)
+
+El universo propuesto por Gödel, debido a la distribución de materia que presenta, se encuentra deformado de tal forma que una nave viajando a una velocidad suficientemente grande %análisis de Gödel de la velocidad y combustible necesarios para el viaje  \cite{remark}
+puede viajar en una trayectoria hacia el futuro para después devolverlo a algún punto en su pasado.
+
+
+%%%%
+
+%En el espacio vacío existe una completa equivalencia entre obsevadores que se mueven a velocidades uniformes diferentes
+
+La presencia de materia deforma el espacio y da a los observadores percepciones naturales o distorcionadas más allá del hecho de que sean equivalentes y sigan las mismas leyes de movimiento. Dentro de las soluciones de las ecuaciones de campo conocidas, bien comportadas (?), todos de los obsevadores pueden encajarse en un \emph{world time} que se puede tomar como el tiempo verdadero y de cierta forma volvemos a la antigua concepción newtoniana de tiempo y transcurre de una forma objetiva, tal como Gödel lo plantea, para todos estos observadores.
+%Explicar world time
+
+¿Que sucede entonces para los espacios, como los universos rotatorios, para los que no se puede definir un world time o tiempo cosmológico absoluto? Esta pregunta la plantea Gödel, y resulta que para estas situaciones estos espacios además de no contener esta definición de tiempo poseen otras características que podrían permitir a un observador viajando a una velocidad considerable, en comparación con la velocidad de la luz, llegar al futuro y al continuar con el viaje regresar a algún punto en su pasado encontrandose con su yo de ese entonces.
+
+\chapter{Breve repaso de la teoría de la relatividad}
+
+%\section{Espacio tiempo, métrica y geodésicas}
+
+En 1905 Einstein propuso su teoría de la relatividad especial, pero fue Minkowski quien hizo la representación matemática que daría lugar al siguiente gran paso, la formulación de la relatividad general.
+
+Las transformaciones de Galileo (\ref{galileo}) gobernaban la mecánica newtoniana en donde el espacio era considerado como absoluto y estático, de la misma forma que el tiempo.
+
+\begin{equation}
+ x=x'+vt \qquad y=y' \qquad z=z' \qquad t=t' ,
+ \label{galileo}
+\end{equation}
+
+Pero las ecuaciones de Maxwell que describen el electromagnetismo, son invariantes bajo estas transformaciones. Como estas ecuaciones eran las indicadas para describir los fenómenos electromagnéticos, las transformaciones indicadas en este caso fueron las siguientes:
+
+\begin{equation}
+x'=\frac{x - v_x t}{\sqrt{1-\frac{v^2}{c^2}}} \qquad t'=\frac{t-xv_x}{\sqrt{1-\frac{v^2}{c^2}}}
+\label{lorentz}
+\end{equation}
+
+
+estas son las conocidas transformaciones propuestas por Hendrick Antoon Lorentz a principios del siglo XX %pero fue Poincaré quien les dió la forma que usamos hoy en día
+, con las que las ecuaciones de Maxwell permanecen invariantes y para que para cualquiera dos observadores la velocidad de la luz permanece constante que era interpretado debido a la existencia de un marco de referencia privilegiado, conocido como éter, un/una ''algo/sustancia'' invisible e inperceptible con respecto al que la luz se mueve.
+
+Esta idea de un algo imperceptible y que por lo tanto que no se puede medir va en contra a las ideas positivistas(?), algo que no puedes medir/que no es comprobable experimentalmente no debería ser parte de la teoría fundamental.
+ 
+No fue hasta que Einsten propuso una explicación a las transformaciones de Lorentz, conclusiones que desafiaban la intuición dado que  la posición, la velocidad, incluso el tamaño de un objeto y el tiempo que le tomaba realizar una acción dependía de la velocidad relativa del observador con respecto a este.
+
+Además, en esta teoría se tiene una cota fija que limita la velocidad a la que puede viajar una partícula. 
+
+Si por ejemplo, al observar una partícula material te percatas de que comienza a moverse a velocidades cercanas a la velocidad de la luz, lo que verás es que ocurre un cambio en la partícula, comienza a aplastarse/achatarse -en dirección de su movimiento- y además su masa aumenta, esto es debido a la presencia del factor gama 
+
+\begin{equation}
+\gamma=\frac{1}{\sqrt{1-\frac{v^2}{c^2}}},
+\label{fgamma}
+\end{equation}
+
+
+%%% Diagrama que muestre la acción de gamma en la longitud(tamaño) y tiempo que le tomó al cuerpo hacer el recorrido.
+
+dentro de las relaciones de transformación tanto de longitud como de masa, más increíble aún puede resultar el hecho de que si medimos el tiempo de una partícula moviéndose a velocidades altas(cercanas a la velocidad de la luz), nuestra conclusión será que desde nuestro sistema de referencia (inercial) el tiempo que le tomó hacer un viaje o realizar una acción fue mucho mayor al que para él, desde su sistema, le tomó hacerlo.
+Pero hay que recordar que, no por cada uno tener una medición  de tiempo diferente la medicón de uno de ellos es válida mientras que la del otro no lo es, al contrario ambos obsevadores están en lo correcto.
+
+Las transformaciones de Lorentz -restringen- de forma explícita el movimiento de una partícula, que aparezca el factor gamma en la relación de masa implica que mientrasmás rápido una partícula se quiera mover, mayor energía necesita.
+
+\section{Métrica}
+
+En la relatividad especial de Einstein se analiza el espacio tiempo plano dado por la métrica de Minkowski
+\begin{equation}
+ds^2=-c^2dt^2+dx^2+dy^2+dz^2 ,
+\label{minkowski}
+\end{equation}
+
+
+En este espacio se presenta el movimiento de una partícula libre de cualquier -perturbación- gravitacional y se introducen los conceptos de: línea de mundo, tiempo propio, conode luz,....
+
+Las líneas de mundo es la representación en cuatro dimensiones de la trayectoria de una partícula, además de -mapear las tres coordenadas espaciales, las evoluciona en el tiempo-
+% Diagrama de la línea de mundo
+
+Los conos de luz limitan las -trayectorias causales- que una partícula material puede seguir. Como ya vimos que lo más rápido que puede viajar una partícula es a la velocidad de la luz, y esto sólo los fotones que carecen de masa, para cualquier otra partícula que sólo puede alcanzar velocidades menores sus trayectorias posibles se deben encontrar dentro del cono de luz. Este cono ubicado en el punto $P$ en la hipersuperficie espacial para un tiempo dado $t=t'$ representa en que puntos para un tiempo futuro esta partícula tiene acceso así como tambíen los posibles puntos de los que pudo haber venido de su trayectoria pasada hasta llegar a $P$.
+
+Cualquier punto $P'$ dentro del cono de luz futuro es un punto alcanzable para está partícula ya que sólo requiere velocidades menores a la de la luz, mientras este punto se acerque más al cono, requiere velocidades mayores para llegar, de la misma forma, si el punto $P''$ se encuentra dentro del cono pasado el punto $P$ le es perfectamente alcanzable.
+Ahora, si la partícula en el punto $P$ quisiera llegar al punto $Q$ sólo podrá alcanzarlo si estamos hablando de una partícula de luz, por que requiere moverse a $c$. Un último caso es cuando la partícula quiere alcanzar el punto $R$ que se encuentra fuera de su cono de luz pero en la misma hipersuperficie en un tiempo constante
+%%% REVISAR: si es necesario comentar dos veces el significado de la imágen, revisar artículos (rindler, visualisation of GU.)
+\begin{figure}[h!]
+\centering
+\includegraphics[height=2in]{conodeluz}
+\caption{ La línea de mundo de una partícula en el punto $P$ se -debe- encontrar en todo punto dentro del cono de luz de la misma, y tiene -permitido- llegar a $P$ desde un punto $P''$ en el pasado y a partir de $P$ alcanzar el punto $P'$ en el futuro siempre moviéndose a velocidades menores a $c$. Sólo un fotón puede ir de $P$ a  cualquier punto $Q$ en la superficie del cono. Para alcanzar un punto $R$ fuera del cono la partícula necesita viajar a velocidades mayores a $c$}
+\label{conodeluz}
+\end{figure}
+
+A partir de la métrica se pueden derivar estas restricciones
+\begin{equation} 
+ds^2=0 \qquad \to \qquad c^2dt^2=dx^2+dy^2+dz^2 \qquad partícula~ de~ luz 
+\end{equation}
+
+\begin{equation}
+ds^2<0 \qquad \to \qquad c^2dt^2>dx^2+dy^2+dz^2 \qquad partícula~material
+\end{equation}
+
+\begin{equation}
+ds^2>0 \qquad \to \qquad c^2dt^2<dx^2+dy^2+dz^2 \qquad partícula~con~velocidad~mayor ~a~c
+\end{equation}
+
+
+
+\section{Geodésicas}
+
+Para cualquier espacio se puede encontrar una curva específica que conecte dos puntos y que esta curva sea la más corta posible. Para el espacio plano esta curva es siempre una línea recta, pero en otros espacios estas curvas pueden no ser tan triviales.
+
+La ecuación \ref{geodesicas} es la llamada ecuación de las geodésicas 
+\begin{equation}
+\frac{d^2x^\alpha}{d\tau^2}+\Gamma^\alpha_{\beta \gamma} \frac{dx^\beta}{d\tau}\frac{dx^\gamma}{d\tau}=0,
+\label{geodesicas}
+\end{equation}
+
+donde toda la información sobre la curvatura del espacio está contenida en los símbolos de Christoffel que están en función de las primeras derivadas de la métrica
+\begin{equation}
+\Gamma^\alpha_{\beta \gamma}=\frac{1}{2}g^{\alpha \beta} \left( \frac{\partial g_{\beta \sigma}}{\partial x^\alpha} + \frac{\partial g_{\gamma \\beta}}{\partial x^\beta} - \frac{\partial g_{\alpha \beta}}{\partial x^\sigma} \right),
+\label{christoffel}
+\end{equation}
+
+
+
+\chapter{Universo de Gödel}
+
+%%% Completar esta sección muy básicamente y ver si                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             es necesaria.
+%\section{Gravitación Newtoniana}
+% Gravitación Newtoniana (MTW(?), GR Price )
+
+\section{Derivación del modelo de universo de Gödel}
+% Derivación del GU (Rindler)
+
+%Al parecer Gödel tenía claro que un universo en rotación excluia la posibilidad de asignarle un tiempo cosmológico a un modelo de este tipo, fue de ahí que partió su idea de crear un modelo y en analogía con nuestro universo también quería que fuera homogeneo. %Una gran diferencia con los modelos de Friedman en los que el universo es homogéneo e isótropo.
+%A partir de estas restricciones Gödel empezó a trabajar en lo que, a pesar de no ser el primer modelo que proponía un universo rotante si profundizaba en las implicaciones que estas características conllevan.
+
+%Ahora se hará una breve derivación de este modelo de universo siguendo el -orden lógico- que utilizó Gödel, pero con un procedimiento diferente.
+
+En 1939 se publicó el primer volumen de \emph{The Library of Living Philosophers}, creación de Paul A. Schilpp quien fue el editor hasta los años  ochentas. El propósito de este conjunto de libros es básicamente presentar la autobiografía intelectual del personaje a quien va dedicado el volumen, además de una serie de -artículos- de sus contemporáneos en los que presentan cuestionamientos a distintos trabajos y para los que resiven respuesta del -homenajeado-, publicado todo en el mismo volumen. La idea es tener un compendio de esta interacción donde se espera obtener el mayor provecho al -sacar a la luz dudas o comentarios a los que el autor al responder ayuden a aclarar y ampliar el conocimiento-.
+
+Como contribución al séptimo volumen dedicado a su gran amigo Albert Einstein, Kurt Gödel se propuso hacer un escrito titulado ''Some remarks about the relation between the theory of relativity and Kant''
+
+un modelo de universo en rotación consistente con la relatividad general.
+Además, al parecer Gödel tenía claro que un universo en rotación excluía la posibilidad de asignarle un tiempo cosmológico a un modelo de este tipo, con esto en mente estaría 
+
+ fue de ahí que partió su idea de crear un modelo y en analogía con nuestro universo también quería que fuera homogeneo.
+
+
+
+\section{Características del modelo}
+% Características (9-Gödel's)
+%Demostraciones
+
+(1) \emph{Solución estacionaria y espacialmente homogénea}  
+
+$\circ $ ~ Por construcción,  procedimiento de Rindler
+
+$\circ$~ Análisis de: On Gödel and the ideality of time
+
+(2)\emph{Grupo uniparamétrico de transformación; cualquiera dos líneas de universo son equidistantes}
+
+$\circ$~ Parámetro de desviación geodésica ($\xi$)?
+
+(3)\emph{S tiene simetría rotacional}
+
+$\circ$~ Gödel's demostration
+
+$\circ$~ Cambio de coordenadas
+
+(4)\emph{A todos los vectores temporales y nulos se les puede asignar una dirección temporal}
+
+$\circ$~ ...
+
+(5)\emph{No se puede asignar una coordenada de tiempo $t$ a cada punto del espacio tiempo de tal forma que $t$ siempre aumente}
+
+$\circ$~Revisar demostración de Gödel
+
+$\circ$~No se puede asignar un world time al modelo por la anisotropía- No se puede foliar el modelo- d'inverno/schwarzschild
+
+(6)\emph{Toda línea de universo de materia es abierta y de longitud infinita que nunca se acerca a ninguno de sus puntos anteriores, pero también existen curvas de materia cerradas}
+
+$\circ$ ~ ...
+
+(7)\emph{No existen hipersuperficies espaciales que intersecten cada linea de universo de materia}
+
+$\circ$~Revisar demostración de Gödel
+
+$\circ$~ No se puede foliar/ Esta enlazado con (6)
+
+(8)\emph{No existe un tiempo absoluto}
+
+$\circ$~Revisar demostración de Gödel
+
+$\circ$~Proposición de la world time
+
+(9)\emph{La materia gira relativa al compás de inercial velocidad angular $2(\pi\kappa\rho)^\frac{1}{2}$}
+
+$\circ$~Revisar demostración de Gödel
+
+$\circ$~Por construcción de Rindler
+
+% Diferencia con nuestro universo/ por que esta métrica no describe nuestro universo, un universo en expansión pero no rotando(wwt, la búsqueda de la rotación de todas las galaxias en una dirección específica).
+
+
+\vspace{3em}
+
+
+\emph{FALTA UBICAR EN EL TEXTO}
+% FALTA UBICAR
+% Alguna sección en la que se discuta brevemente la ''definición'' de tiempo y los problemas que presenta.
+
+Noción de tiempo de Kant.
+
+Si el tiempo consiste en la sucesión de capas infinitas de ''ahora'' que comienzan a existir una después de otra. Tomando en cuenta que la noción de simultaneidad depende de cada observador esto implicaría que cada observador tiene su propio tiempo es decir, un conjunto de ''ahoras'' \cite{remark}, en el que ninguno puede decir que el suyo es el dominante, definitivo o absoluto.
+
+Ahora bien, si en el modelo de universo propuesto por Kurt Gödel, tal como él remarcaba, debido a las características impuestas no se le puede asignar un tiempo cosmológico válido para todo (?) observador a forma de analogía con el tiempo absoluto newtoniano, y como existen ciertas trayectorias que una partícula puede seguir para viajar en el tiempo en este modelo, donde esto implica que de alguna forma tiene acceso las capas pasadas de su tiempo, la noción de tiempo impuesta pierde su sentido.
+Lo que Gödel proponía era, como su modelo era una solución a las ecuaciones de Einstein que desafiaba la idea ''intuitiva'' de un tiempo que simpre va hacia adelante, había solo dos opciones, que la relatividad general estuviera errada(?) o que nuestra noción de tiempo no era correcta, él optó por la segunda.
+% 
+Sobre esto, una de las cosas que molestaba a Einstein sobre la teoría newtoniana es la existencia de una fuerza que actuaba de forma instantánea afectando a dos cuerpos de modo que esa fuerza es siempre atractiva. E encontró que lo más rápido que una señal puede viajar es precisamente la velocidad de la luz, por lo que ni la gravedad puede superar esta velocidad, en este sentido no puede ser instantánea. 
+
+Como Rindler lo menciona \cite{rindler}, Gödel ''..incitó a los astrónomos a buscar evidencia de rotación (en las galaxias), y a los filósofos a repensar las ideas sobre el tiempo.'' 
+%
+
+%Si estamos de acuerdo en que la relatividad general es la ley suprema que rige las leyes físicas y que ha pasado las pruebas 
+
+% La RG nos dice en que tipo de modelos se van a cumplir las mismas leyes físcas que se cumplen en nuestro universo(????)
+
+Su argumento fué que la relatividad general pone una serie de restricciones a lo que se puede ''generar'' como una realidad, cualquier modelo que soluciones las ecuaciones en principio, su existencia es podible y se van a cumplir las leyes físicas que conocemos. Entonces si en este modelo, homogeneo y rotando que resulta ser una solución mucho más general a las ecuaciones que el modelo que describe el universo en el que vivimos, no hay necesidad de definir un tiempo cosmológico, la definición de este tiempo podría estar demás en el nuestro por el simple hecho de que nuestra noción del cambio en el tiempo nos obliga a proponer uno.
+
+\chapter{Geodésicas en el modelo UG}
+
+\section{Ecuaciones de las geodésicas}
+
+
+
+
+
+
+
+
+
+
+
+ \begin{thebibliography}{99}
+ %orden alfabético o por aparición
+ \bibitem{wwt} Yourgrau, P.. (2005). \emph{A World Without Time}. New York %(?)
+ : Basic Books.
+ 
+ \bibitem{remark} Gödel, K.. (1949). A Remark about the Relationship Between Relativity Theory and Idealistic Philosophy. \emph{P. A. Schilpp},pp. 557-562
+ 
+ \bibitem{inverno} d'Inverno, R.. (1992). \emph{Introducing Einstein's Relativity}. 
+ 
+ \bibitem{rindler} Rindler, W.. ( junio 2009). Gödel, Einstein, Mach, Gamow, and Lanczos: Gödel’s remarkable excursion into cosmology. \emph{Am. J. Phys}, 77, 498-510.
+ 
+ 
+ \end{thebibliography}
+ 
+\end{document}00
